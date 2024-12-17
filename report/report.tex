@@ -51,6 +51,8 @@
 
 \usepackage{titlesec}
 
+\usepackage{enumitem}
+
 \captionsetup{labelsep=endash}
 
 \captionsetup[figure]{name={Рисунок},labelsep=endash} 
@@ -65,9 +67,9 @@
 \titleformat{\subsubsection}{\large\bfseries}{\thesubsubsection}{1em}{}
 
 % Установка расстояний между секциями и подсекциями
-\titlespacing*{\section}{0pt}{1.5\baselineskip}{1.5\baselineskip}
-% \titlespacing*{\subsection}{0pt}{1.5\baselineskip}{1.5\baselineskip}  % 1.5 межстрочное расстояние для подсекций
-\titlespacing*{\subsubsection}{0pt}{1ex}{0pt}  % Убираем вертикальный отступ после \subsubsection
+\titlespacing*{\section}{\parindent}{1.5\baselineskip}{1.2\baselineskip}
+\titlespacing*{\subsection}{\parindent}{1.5\baselineskip}{39pt}  % 1.5 межстрочное расстояние для подсекций
+\titlespacing*{\subsubsection}{\parindent}{\baselineskip}{0pt}  % Убираем вертикальный отступ после \subsubsection
 
 \newcommand{\chipher}{
         {\fontsize{16pt}{16pt}\selectfont  КР.ИИ-21.210563-3 81 00}
@@ -76,10 +78,15 @@
 \newcommand{\theme}{Распознавание глаукомы по тонометрии глаза}
 
 \newcommand{\student}{Литвинюк Т.В.}
-
 \newcommand{\teacher}{Якимук А.В.}
+\newcommand{\normctrl}{Якимук А.В.}
+\newcommand{\approve}{Головко В.А.}
 
-
+\renewcommand{\baselinestretch}{1.2}
+\setlist{
+        leftmargin=0pt,
+        itemindent=\parindent
+}
 \begin{document}
 
         \backgroundsetup{
@@ -96,7 +103,6 @@
         \pagestyle{empty}
 
 
-        \renewcommand{\contentsname}{\centering \MakeUppercase{Содержание}}
 
         \include{title_page/title_page}
         \include{application/application_title}

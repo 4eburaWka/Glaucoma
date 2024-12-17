@@ -42,6 +42,18 @@
         {\fontsize{9pt}{9pt}\selectfont \teacher}
     \end{textblock*} 
 
+    % норм контроль
+    \begin{textblock*}{2.3cm}(3.74cm,28.35cm) 
+        \centering 
+        {\fontsize{9pt}{9pt}\selectfont \normctrl}
+    \end{textblock*} 
+
+    % утвердил
+    \begin{textblock*}{2.3cm}(3.74cm,28.85cm) 
+        \centering 
+        {\fontsize{9pt}{9pt}\selectfont \approve}
+    \end{textblock*} 
+
 
     % вставляем рамку
     % \AddToShipoutPictureBG{
@@ -72,15 +84,19 @@
     \setlength{\cftbeforesubsecskip}{0pt} % Отступы между подглавами
     \setlength{\cftsecindent}{0pt} % Убираем отступ у глав
     \setlength{\cftsubsecindent}{0pt} % Задаём отступ у подглав
-    \renewcommand{\contentsname}{СОДЕРЖАНИЕ} % Заголовок оглавления
+    \renewcommand{\contentsname}{}
     \renewcommand{\cftsecfont}{\bfseries} % Делаем заголовки секций (глав) жирными
     \renewcommand{\cftsecpagefont}{\bfseries}
     % Включить точки-продолжения в содержании
     \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
     \renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+    
+    \noindent\hspace*{\parindent}\bfseries СОДЕРЖАНИЕ
 
     % содержание
     \tableofcontents
+    \noindent{ПРИЛОЖЕНИЕ А. ТЕКСТ ПРОГРАММЫ}
+    \normalfont
 
     \newpage
     \ClearShipoutPicture
