@@ -52,6 +52,7 @@
 \usepackage{titlesec}
 
 \usepackage{enumitem}
+\sloppy
 
 \captionsetup{labelsep=endash}
 
@@ -64,15 +65,15 @@
 \setlength{\parindent}{12.5mm} 
 
 \titleformat{\section}{\normalfont\Large\bfseries\MakeUppercase}{\thesection}{1em}{}
-\titleformat{\subsubsection}{\large\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\subsubsection}{\bfseries}{\thesubsubsection}{1em}{}
 
 % Установка расстояний между секциями и подсекциями
-\titlespacing*{\section}{\parindent}{1.5\baselineskip}{1.2\baselineskip}
+\titlespacing*{\section}{\parindent}{1.5\baselineskip}{26pt}
 \titlespacing*{\subsection}{\parindent}{1.5\baselineskip}{39pt}  % 1.5 межстрочное расстояние для подсекций
-\titlespacing*{\subsubsection}{\parindent}{\baselineskip}{0pt}  % Убираем вертикальный отступ после \subsubsection
+\titlespacing*{\subsubsection}{\parindent}{0pt}{0pt}  % Убираем вертикальный отступ после \subsubsection
 
 \newcommand{\chipher}{
-        {\fontsize{16pt}{16pt}\selectfont  КР.ИИ-21.210563-3 81 00}
+        {\fontsize{16pt}{16pt}\selectfont  КР.ИИ-21.210563-4 81 00}
 }
 
 \newcommand{\theme}{Распознавание глаукомы по тонометрии глаза}
@@ -85,7 +86,11 @@
 \renewcommand{\baselinestretch}{1.2}
 \setlist{
         leftmargin=0pt,
-        itemindent=\parindent
+        itemindent=1.5cm,
+        listparindent=0pt,
+        parsep=0pt,
+        itemsep=0pt,
+        topsep=0pt 
 }
 \begin{document}
 
@@ -128,9 +133,9 @@
         contents={\includegraphics[width=\paperwidth,height=\paperheight]{border/border11.png}}
     }
 
-    \makeatletter
-\renewcommand\@biblabel[1]{#1.} % Меняем формат метки в списке литературы
-\makeatother
+        \makeatletter
+                \renewcommand\@biblabel[1]{#1.} % Меняем формат метки в списке литературы
+        \makeatother
 \renewcommand{\refname}{Список использованных источников}
         \content
     
